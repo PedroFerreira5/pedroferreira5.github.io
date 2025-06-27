@@ -17,6 +17,7 @@ Sou um acadêmico do curso de Bacharelado em Ciência da Computação na Univers
 
 Se você deseja contribuir ou sugerir melhorias para o meu site, fique à vontade para abrir uma issue ou enviar um pull request.
 
+https://pedroferreira5.github.io/
+
 Obrigado por visitar meu site! Espero que você tenha uma boa experiência!
 
-https://pedroferreira5.github.io/
