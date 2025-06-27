@@ -6,28 +6,32 @@
     <title>Meu Perfil - Pedro Ferreira Prado</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Consolas', 'Courier New', monospace;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
-            background-color: #121212; /* Fundo escuro */
-            color: #e0e0e0; /* Texto principal claro */
+            background-color: #171717; /* Darker gray */
+            color: #d4d4d4; /* VS Code text color */
         }
 
         .container {
             max-width: 800px;
             margin: auto;
-            background: #1e1e1e; /* Container um pouco mais claro */
+            background: #323233; /* Slightly lighter gray */
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #5a5a5a; /* Gray border */
         }
 
         h1, h2 {
-            color: #90caf9; /* Azul claro para títulos */
+            color: #969696; /* Light gray for headings */
             display: flex; 
             align-items: center; 
-            gap: 10px; 
+            gap: 10px;
+            border-bottom: 1px solid #444444;
+            padding-bottom: 8px;
+            font-weight: normal;
         }
 
         ul {
@@ -40,7 +44,7 @@
         }
 
         a {
-            color: #81d4fa; /* Azul mais claro para links */
+            color: #b0b0b0; /* Light gray for links */
             text-decoration: none;
         }
 
@@ -51,7 +55,57 @@
         .emoji {
             font-size: 1.2em; 
         }
-    </style>
+
+        /* Estilos para a seção de habilidades */
+        .skills {
+            background: #3a3a3a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .skills h2 {
+            margin-bottom: 10px;
+        }
+
+        .skill {
+            background: #4a4a4a;
+            color: #d0d0d0; /* Light gray text */
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            border-left: 3px solid #666666;
+        }
+
+        /* Estilos para a seção de contato */
+        .contact {
+            margin-top: 20px;
+            padding: 15px;
+            background: #3e3e3e;
+            border-radius: 8px;
+            border-left: 3px solid #707070; /* Mid gray */
+        }
+
+        .contact h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            margin-bottom: 5px;
+        }
+    /* VS Code-like code blocks */
+        code {
+            font-family: 'Consolas', monospace;
+            background: #2d2d2d;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #ce9178; /* VS Code string/peach */
+            font-size: 0.9em;
+        }
+</style>
 </head>
 <body>
     <div class="container">
@@ -69,8 +123,22 @@
 
         <h2>🌟 Meus Hobbies e Interesses</h2>
         <ul>
-            <li>Interesses Principais: Tecnologia 💡, Esportes ⚽, Criptomoedas 💰, Inovações 🌐.</li>
+            <li> Tecnologia 💡, Esportes ⚽, Criptomoedas 💰, Inovações 🌐.</li>
         </ul>
+
+        <div class="skills">
+            <h2>🛠️ Minhas Habilidades</h2>
+            <span class="skill">Programação</span>
+            <span class="skill">Desenvolvimento Web</span>
+            <span class="skill">Análise de Dados</span>
+            <span class="skill">Trabalho em Equipe</span>
+        </div>
+
+        <div class="contact">
+            <h2>📫 Contato</h2>
+            <p>Se você deseja entrar em contato, sinta-se à vontade para me enviar um e-mail:</p>
+            <p><a href="mailto:pedroferreirap05@gmail.com">pedroferreirap05@gmail.com</a></p>
+        </div>
     </div>
 </body>
 </html>
