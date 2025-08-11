@@ -1,144 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil - Pedro Ferreira Prado</title>
-    <style>
-        body {
-            font-family: 'Consolas', 'Courier New', monospace;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #171717; /* Darker gray */
-            color: #d4d4d4; /* VS Code text color */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #323233; /* Slightly lighter gray */
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            border-left: 3px solid #5a5a5a; /* Gray border */
-        }
-
-        h1, h2 {
-            color: #969696; /* Light gray for headings */
-            display: flex; 
-            align-items: center; 
-            gap: 10px;
-            border-bottom: 1px solid #444444;
-            padding-bottom: 8px;
-            font-weight: normal;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #b0b0b0; /* Light gray for links */
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .emoji {
-            font-size: 1.2em; 
-        }
-
-        /* Estilos para a seção de habilidades */
-        .skills {
-            background: #3a3a3a;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .skills h2 {
-            margin-bottom: 10px;
-        }
-
-        .skill {
-            background: #4a4a4a;
-            color: #d0d0d0; /* Light gray text */
-            padding: 5px 10px;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 5px 5px 5px 0;
-            font-family: 'Consolas', monospace;
-            font-size: 0.9em;
-            border-left: 3px solid #666666;
-        }
-
-        /* Estilos para a seção de contato */
-        .contact {
-            margin-top: 20px;
-            padding: 15px;
-            background: #3e3e3e;
-            border-radius: 8px;
-            border-left: 3px solid #707070; /* Mid gray */
-        }
-
-        .contact h2 {
-            margin-bottom: 10px;
-        }
-
-        .contact p {
-            margin-bottom: 5px;
-        }
-    /* VS Code-like code blocks */
-        code {
-            font-family: 'Consolas', monospace;
-            background: #2d2d2d;
-            padding: 2px 5px;
-            border-radius: 3px;
-            color: #ce9178; /* VS Code string/peach */
-            font-size: 0.9em;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Pedro Ferreira Prado</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: #eaeaea;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    color: #bbbbbb;
+    font-size: 1.1rem;
+  }
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  .profile-photo:hover {
+    transform: scale(1.05);
+  }
+  section {
+    background: #1a1a1a;
+    width: 100%;
+    max-width: 850px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  section:hover {
+    transform: translateY(-3px);
+  }
+  section h2 {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    padding: 5px 0;
+    color: #dcdcdc;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .project-card {
+    background: #242424;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  }
+  .project-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  .project-card p {
+    color: #bbbbbb;
+  }
+  .contact {
+    text-align: center;
+  }
+  .contact a {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .contact a:hover {
+    background: #bbbbbb;
+    transform: translateY(-2px);
+  }
 </style>
 </head>
 <body>
-    <div class="container">
-        <h1>👋 Bem-vindo à Minha Página Pessoal!</h1>
-        <p>Olá! Eu sou Pedro Ferreira Prado e esta é minha página pessoal no GitHub Pages. ✨</p>
 
-        <h2>💻 Sobre Mim</h2>
-        <p>
-            Sou um acadêmico dedicado do curso de Bacharelado em Ciência da Computação, atualmente no primeiro dos oito períodos, na renomada Universidade Federal de Alfenas (UNIFAL-MG). 📚
-            Minha jornada é impulsionada por uma profunda paixão pela tecnologia em suas diversas frentes, pela inovação contínua, pelo dinâmico mundo das criptomoedas e pela energia dos esportes. 💡
-        </p>
-        <p>
-            Sou rigorosamente comprometido com a excelência acadêmica e busco, acima de tudo, gerar um impacto positivo e significativo dentro da computação. 🌐
-        </p>
+<header>
+  <img src="https://via.placeholder.com/160" alt="Foto de Perfil" class="profile-photo">
+  <h1>👋 Bem-vindo à Minha Página Pessoal!</h1>
+  <p>Pedro Ferreira Prado</p>
+</header>
 
-        <h2>🌟 Meus Hobbies e Interesses</h2>
-        <ul>
-            <li> Tecnologia 💡, Esportes ⚽, Criptomoedas 💰, Inovações 🌐.</li>
-        </ul>
+<section>
+  <h2>💻 Sobre Mim</h2>
+  <p>Sou um acadêmico dedicado do curso de Bacharelado em Ciência da Computação, atualmente no primeiro dos oito períodos, na renomada Universidade Federal de Alfenas (UNIFAL-MG). 📚 Minha jornada é impulsionada por uma profunda paixão pela tecnologia em suas diversas frentes, pela inovação contínua, pelo dinâmico mundo das criptomoedas e pela energia dos esportes. 💡</p>
+  <p>Sou rigorosamente comprometido com a excelência acadêmica e busco, acima de tudo, gerar um impacto positivo e significativo dentro da computação. 🌐</p>
+</section>
 
-        <div class="skills">
-            <h2>🛠️ Minhas Habilidades</h2>
-            <span class="skill">Programação</span>
-            <span class="skill">Desenvolvimento Web</span>
-            <span class="skill">Análise de Dados</span>
-            <span class="skill">Trabalho em Equipe</span>
-        </div>
+<section>
+  <h2>🌟 Meus Hobbies e Interesses</h2>
+  <ul>
+    <li>Tecnologia 💡</li>
+    <li>Esportes ⚽</li>
+    <li>Criptomoedas 💰</li>
+    <li>Inovações 🌐</li>
+  </ul>
+</section>
 
-        <div class="contact">
-            <h2>📫 Contato</h2>
-            <p>Se você deseja entrar em contato, sinta-se à vontade para me enviar um e-mail:</p>
-            <p><a href="mailto:pedroferreirap05@gmail.com">pedroferreirap05@gmail.com</a></p>
-        </div>
+<section>
+  <h2>🛠️ Minhas Habilidades</h2>
+  <ul>
+    <li>Programação</li>
+    <li>Desenvolvimento Web</li>
+    <li>Análise de Dados</li>
+    <li>Trabalho em Equipe</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📂 Projetos Pessoais</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Projeto 1</h3>
+      <p>Projeto em C++ para gerenciamento de imóveis, manipulando registros em vetores e structs.
+         Objetiva implementar operações de cadastro, busca, exclusão e geração de estatísticas a partir de dados lidos de arquivo texto. 
+         Utiliza estruturas de controle e manipulação de arquivos para praticar conceitos de AEDs I.</p>
     </div>
+    <div class="project-card">
+      <h3>Projeto 2</h3>
+      <p>Projeto em C++ para manipulação de imagens PGM utilizando ponteiros. 
+      Objetiva aplicar operações como ajuste de brilho, rotação, espelhamento, negativa, binarização e redução para 64x64 pixels, gerando novos arquivos de saída e reforçando conceitos de alocação dinâmica e processamento de matrizes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>📫 Contato</h2>
+  <a href="mailto:pedroferreirap05@gmail.com">Enviar E-mail</a>
+</section>
+
 </body>
 </html>
